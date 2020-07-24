@@ -13,9 +13,9 @@ def welcome():
     return "Welcome All"
 
 #@app.route('/predict',methods=["Get"])
-def predict_note_authentication(quantity):
+def predict_price(quantity):
     
-    """Let's Authenticate the Banks Note 
+    """Prediction Price based on stock. 
     This is using docstrings for specifications.
     ---
     parameters:
@@ -41,7 +41,7 @@ def main():
     quantity = st.text_input("Quantity","Type Here")
     result=""
     if st.button("Predict"):
-        result=predict_note_authentication(quantity)
+        result=predict_price(quantity)
     st.success('The output is {}'.format(result))
     if st.button("About"):
         st.text("This is a simple app for deldrimor price prediction.")
